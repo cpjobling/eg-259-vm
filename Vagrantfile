@@ -5,6 +5,7 @@
 #
 # If you have a copy of this file I assume that you have correctly
 # set-up your virtual machine as per the instructions given at
+# https://github.com/cpjobling/eg-259-vm.git.
 #
 #
 # If not, I suggest you go there first.
