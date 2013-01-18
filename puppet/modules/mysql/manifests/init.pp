@@ -22,7 +22,7 @@ class mysql {
       command => "mysqladmin -uroot password root",
       require => Service["mysql"];
     "eg259_database":
-      unless => "mysql -uroot -proot eg259_db",
+      unless => "mysql -uroot -proot eg259_database",
       command => "mysql -uroot -proot -e 'create database eg259_database'",
       require => Exec["mysql_password"]
   }
