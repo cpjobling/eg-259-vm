@@ -24,11 +24,9 @@ Vagrant::Config.run do |config|
   config.vm.box = "precise32_for_eg259"
   config.vm.box_url = "https://dl.dropbox.com/u/172477/eg-259/vbox/precise32_for_eg259.box"
 
-  # If you have installed the vagrant-vbguest plugin, you can un-comment
-  # the following line to have virtualbox guest additions automatically
-  # updated when you upgrade virtual box on your host machine.
-  # config.vbguest.auto_update = true
-
-  # do NOT download the virtual guest additions so file from a webserver
-  # config.vbguest.no_remote = true
+  config.vm.customize ["modifyvm", :id, "--name", "eg259box", "--memory", "512"]
+  config.vm.host_name = "eg259box"
+  config.vm.forward_port 22, 2222, :auto => true
+  config.vm.forward_port 80, 4567
+  config.vm.network :hostonly, "33.33.13.37"
 end
