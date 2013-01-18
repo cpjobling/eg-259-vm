@@ -30,6 +30,18 @@ Vagrant::Config.run do |config|
   config.vm.forward_port 80, 4567
   config.vm.network :hostonly, "33.33.13.37"
 
-  config.vm.share_folder "puppet", "/etc/puppet", "./puppet" 
+  # config.vm.share_folder "puppet", "/etc/puppet", "./puppet" 
   config.vm.share_folder "web", "/var/www", "./web" 
+  
+  # Set the Timezone to something useful
+  config.vm.provision :shell, :inline => "echo \"Europe/London\" | sudo tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata"
+  # Update the server
+  config.vm.provision :shell, :inline => "apt-get update --fix-missing"
+  # Enable Puppet
+  config.vm.provision :puppet do |puppet|
+      puppet.facter = { "fqdn" => "local.eg259", "hostname" => "www" }
+      puppet.manifests_path = "puppet/manifests"
+      puppet.manifest_file  = "site.pp"
+      puppet.module_path  = "puppet/modules"
+  end
 end
