@@ -30,7 +30,7 @@ Vagrant::Config.run do |config|
   config.vm.forward_port 80, 4567
   config.vm.network :hostonly, "33.33.13.37"
 
-  # config.vm.share_folder "puppet", "/etc/puppet", "./puppet" 
+  config.vm.share_folder "puppet", "/etc/puppet", "./puppet" 
   config.vm.share_folder "web", "/var/www", "./web" 
   
   # Set the Timezone to something useful

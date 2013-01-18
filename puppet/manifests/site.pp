@@ -4,4 +4,5 @@ Exec {
 include apache2
 include mysql
 include php
+include phpmyadmin
 
