@@ -7,7 +7,7 @@
 The EG-259 VM has the following features:
 
 - Ubuntu 12.04.1 LTS (Precise Pangolin) server (32 bit) with RVM and Ruby 1.9.3 packaged as a Vagrant base box
-- A Puppet provisioning script which automatically installs a LAMP stack consisting of the Apache 2 Web server, PHP Version 5, MySQL
+- A Puppet provisioning script which automatically installs a LAMP stack consisting of the Apache 2 Web server, PHP Version 5 and MySQL
 - phpMyAdmin is included for web-based administration of the MySQL database
 
 ## Getting Started
@@ -42,4 +42,13 @@ Furthermore, because you have Git installed, you can develop your web site and w
 ## Contributing
 
 Fork, clone, develop send me a pull request.
+
+## References
+
+1. Anthony Burns and Tom Copeland, *Deploying Rails*, Pragmatic Bookshelf, 2012.
+2. Philip Sturgeon, [Vagrant: What, Why and How?](http://net.tutsplus.com/tutorials/php/vagrant-what-why-and-how/),  net.tustsplus.com, August 20, 2012. 
+3. Philip Sturgeon, *PyroCMS Vagrant* (GitHib Repository <http://github.com/pyrocms/devops-puppet.git>), Accessed: January 19, 2013.
+4. Henri Sipoen, [Puppet Module for LAMP Installation](http://awaseroot.wordpress.com/2012/04/30/puppet-module-for-lamp-installation/), awaseroot.wordpress.com,
+April 30, 2012.
+
 
