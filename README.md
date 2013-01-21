@@ -27,7 +27,7 @@ The EG-259 VM has the following features:
 Before you can make use of this you will need to install the following development tools:
 
 - [Git for your platform](https://help.github.com/articles/set-up-git)
-- [VirtualBox for your platform]https://www.virtualbox.org/wiki/Downloads)
+- [VirtualBox for your platform](https://www.virtualbox.org/wiki/Downloads)
 - The latest version of [Vagrant for your platform](http://www.vagrantup.com/)
 
 In most cases, this is simply a question of downloading the correct installer package for your development machine and 
