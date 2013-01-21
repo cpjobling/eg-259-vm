@@ -27,12 +27,14 @@ The EG-259 VM has the following features:
 Before you can make use of this you will need to install the following development tools:
 
 - [Git for your platform](https://help.github.com/articles/set-up-git)
-- VirtualBox for your platform
-- Vagrant for your platform
+- [VirtualBox for your platform]https://www.virtualbox.org/wiki/Downloads)
+- The latest version of [Vagrant for your platform](http://www.vagrantup.com/)
 
-In most cases, this is simply a question of downloading the correct installer package for your development machine and running the installer.
+In most cases, this is simply a question of downloading the correct installer package for your development machine and 
+running the installer.
 
-You may wish to study these additional resources to find out why these three tools have become key components of the modern web developer's toolbox.
+You may wish to study these additional resources to find out why these three tools have become key components of 
+the modern web developer's toolbox.
 
 - About Git
 - About VirtualBox
@@ -42,12 +44,16 @@ You may wish to study these additional resources to find out why these three too
 
 ## Installing the EG-259 VM
 
-Once you have Git, VirtualBox and Vagrant installed you'll be able to *clone* this repository and run Vagrant to download a virtual machine image specially
-configured for the EG-259 Web Applications Technology module, start it up in VirtualBox and provision it as a LAMP (Linux Apache PHP MySQL) server. Even better,
-you will have an identical copy of the machine that Dr Jobling and your peers will be using on this module and will not need to worry about any system specific configurations. The EG-259 Virtual Machine will run as a guest operating system that will be virtually indistinguishable from a native web server but even better,
-the files that will become the web sites developed in the course can be created and edited in a local folder on the host operating system.
+Once you have Git, VirtualBox and Vagrant installed you'll be able to *clone* this repository and run Vagrant to 
+download a virtual machine image specially configured for the EG-259 Web Applications Technology module, start it 
+up in VirtualBox and provision it as a LAMP (Linux Apache PHP MySQL) server. Even better, you will have an identical
+copy of the machine that Dr Jobling and your peers will be using on this module and will not need to worry about 
+any system specific configurations. The EG-259 Virtual Machine will run as a guest operating system that will be 
+virtually indistinguishable from a native web server but even better, the files that will become the web sites 
+developed in the course can be created and edited in a local folder on the host operating system.
 
-Furthermore, because you have Git installed, you can develop your web site and web applications in the knowledge that your work can be version controlled.
+Furthermore, because you have Git installed, you can develop your web site and web applications in the knowledge 
+that your work can be version controlled.
 
 ## Using the EG-259 VM
 
