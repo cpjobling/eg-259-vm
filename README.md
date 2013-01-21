@@ -56,8 +56,22 @@ toolbox.
 Once you have Git, VirtualBox and Vagrant installed you'll be able to
 *clone* this repository and run Vagrant to download a virtual machine
 image specially configured for the EG-259 Web Applications Technology
-module, start it up in VirtualBox and provision it as a LAMP (Linux
-Apache PHP MySQL) server. Even better, you will have an identical copy
+module. Here are the commands:
+
+    git clone https://github.com/cpjobling/eg-259-vm
+    cd eg-259-vm
+
+After you've cloned the repository and `cd`'d into the folder, you should be able to start up the
+virtual machine using Vagrant and provision it as a LAMP (Linux
+Apache PHP MySQL) server. 
+
+    vagrant up 
+
+The first time you do this, there will be a delay of a few minutes
+while an image file is downloaded from the Internet, copied into VirtualBox and started up. There will then be another short delay while the LAMP stack is downlowded and installed. After this initial set-up time, `vagrant up` loads the virtual machine up very 
+quickly.
+
+Even better, you will have an identical copy
 of the machine that Dr Jobling and your peers will be using on this
 module and will not need to worry about any system specific
 configurations. The EG-259 Virtual Machine will run as a guest operating
@@ -66,11 +80,32 @@ but even better, the files that will become the web sites developed in
 the course can be created and edited in a local folder on the host
 operating system.
 
+
+
+## Using the EG-259 VM
+
+The URL of your new web server is <http://localhost:4567> and the contents of the
+`eg-259-vm\web` folder is mapped to Apacher's `DOCUMENT_ROOT` `/var/www` on the guest web server.
+
+To login to the guest server simply type:
+
+    vagrant ssh  
+
+To shutdown the server, type:
+
+    vagrant halt
+
+To reload it after making changes to the `Vagrantfile`, type:
+
+    vagrant reload
+
+To destroy the virtual machine:
+
+    vagrant destroy
+
 Furthermore, because you have Git installed, you can develop your web
 site and web applications in the knowledge that your work can be version
 controlled.
-
-## Using the EG-259 VM
 
 ## Contributing
 
