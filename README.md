@@ -2,6 +2,18 @@
 
 ## What's this for?
 
+EG-259 Web Applications Technology is a 10 week lecture course which introduces students to
+web applications development. To succeed in the course students will need to get to grips with
+the LAMP stack preferably on a web server that matches what they will see in industry. Even though
+packaged versions of Apache, PHP and MySQL are available for Windows and Mac platforms, they are 
+arranged differently on each machine and it's difficult to be sure that all students have the same set ups as their teacher. 
+
+The ideal would be to give each student access to a personal Linux web server. However there are 
+cost issues with this approach. Last year, I encouraged students to install VitualBox and install
+an Ubuntu Server as a virtual machine. With Vagrant, now available packaged as install images for
+Windows and Mac, this process becomes even easier. This project provides a pre-boxed Linux server image that can be installed and provisioned in around 25-30 minutes (about the length of a lecture).
+At the same time it will introduce students to Git and GitHub which are central to the professional web development community.
+
 ## What's included?
 
 The EG-259 VM has the following features:
@@ -14,7 +26,7 @@ The EG-259 VM has the following features:
 
 Before you can make use of this you will need to install the following development tools:
 
-- Git for your platform
+- [Git for your platform](https://help.github.com/articles/set-up-git)
 - VirtualBox for your platform
 - Vagrant for your platform
 
@@ -41,7 +53,9 @@ Furthermore, because you have Git installed, you can develop your web site and w
 
 ## Contributing
 
-Fork, clone, develop send me a pull request.
+- [Follow this project](https://help.github.com/articles/be-social). 
+- [Fork, clone, extend](https://help.github.com/articles/fork-a-repo). 
+- Send me a pull request when you're done.
 
 ## References
 
