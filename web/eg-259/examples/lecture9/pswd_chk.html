@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- pswd_chk.html
+An example of input password checking, using the submit
+event
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title> Illustrate password checking </title>
+    <script>
+      // The event handler for password checking
+
+      function chkPasswords() {
+        var init = document.getElementById("initial");
+        var sec = document.getElementById("second");
+        if(init.value === "") {
+          alert("You did not enter a password \n" + "Please enter one now");
+          init.focus();
+          return false;
+        }
+        if(init.value !== sec.value) {
+          alert("The two passwords you enterd are not the same \n" + "Please re-enter both now");
+          init.focus();
+          init.select();
+          return false;
+        } else {
+          return true;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h3> Password Input </h3>
+    <form id = "myForm"  method="post" action = "http://www.cpjobling.me/cgi-bin/echo_form.cgi">
+      <p>
+        <label for="initial">Your password: </label>
+        <input type = "password"  name="password" id = "initial"  size = "10" />
+        <br />
+        <br />
+        <label for="second">Verify password: </label>
+        <input type = "password"  name="password_confirmation" id = "second"   size = "10" />
+        <br />
+        <br />
+        <input type = "reset"  name = "reset" />
+        <input type = "submit"  name = "submit" />
+      </p>
+    </form>
+    <script>
+      // Set submit button onsubmit property to the event handler
+
+      document.getElementById("second").onblur = chkPasswords;
+      document.getElementById("myForm").onsubmit = chkPasswords;
+    </script>
+  </body>
+</html>

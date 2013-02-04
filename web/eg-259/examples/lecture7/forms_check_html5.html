@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- forms_check_html5.html
+Uses the new HTML5 pattern attribute
+to validate phone number
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title> Phone number tester (HTML5)</title>
+  </head>
+  <body>
+    <h1>Phone Number Tester (HTML5)</h1>
+    <p>An example of the use of Regular Expressions for form validation. View source to see the code.</p>
+    <p>Phone numbers should match the pattern 3 digits followed by a dash followed by four digits. The regular expression for this is
+      <code>/\d{3}-\d{4}/</code>.
+    </p>
+    <p>HTML5 provides a new form attribute <em>pattern</em> whose value is a regular expression (without the slashes). When supported,
+      this can be used instead of JavaScript for form validation.</p>
+    <p>In production, you would normally need to provide a JavaScript fallback for browsers that don't yet support the <em>pattern</em> attribute.</p>
+    <!-- No need for onsubmit validator now -->
+    <form id="phone" method="post" action="http://www.cpjobling.me/cgi-bin/echo_form.cgi">
+      <label for="phone_number">Phone number: </label>
+      <input id="phone_number" type="text" name="phone_number" 
+             pattern="\d{3}-\d{4}" placeholder="444-4444" 
+             title="Please enter phone number using the pattern ddd-dddd."/>
+      <input type="submit" name="Submit" value="Submit" />
+    </form>
+    
+    <!-- Look no scripts! -->
+  </body>
+</html>

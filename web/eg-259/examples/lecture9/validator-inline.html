@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- validator.html
+An example of input validation using the change and submit
+events. This version uses "inline" validation error messages
+based on a span as suggested in the discussion on 30/10/2006.
+Thanks to Russell Morris for raising the issue
+and Christian Thum for the solution.
+
+This solution uses a styled div as a placeholder for the error message.
+It doesn't use innerHTML to write error the message into the div,
+instead it uses DOM directly. Apparently innerHTML doesn't work
+in Mozilla when the document type is XHTML. Presumably because
+arbitrary text may not produce valid XML.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title> Illustrate form input validation> </title>
+    <script>
+      // The event handler function for the name text box
+
+      function chkName() {
+        var myName = document.getElementById("custName");
+
+        // Test the format of the input name
+        //  Allow the spaces after the commas to be optional
+        //  Allow the period after the initial to be optional
+
+        var pos = myName.value.search(/^[A-Z][a-z]+, ?[A-Z][a-z]+, ?[A-Z]\.?$/);
+
+        if(pos != 0) {
+          message = "The name you entered (" + myName.value + ") is not in the correct form. \n" + 
+                    "The correct form is: " + "Last name, First name, Middle initial\n" + 
+                    "Please go back and fix your name";
+          // write message into custError
+          errorAlert("custError", message)
+          myName.focus();
+          myName.select();
+          return false;
+        } else
+          clearError("custError");
+        return true;
+      }
+
+      // The event handler function for the phone number text box
+
+      function chkPhone() {
+        var myPhone = document.getElementById("phone");
+
+        // Test the format of the input phone number
+
+        var pos = myPhone.value.search(/^\d{3}-\d{3}-\d{4}$/);
+
+        if(pos != 0) {
+          message = "The phone number you entered (" + myPhone.value + ") is not in the correct form. \n" + 
+                    "The correct form is: ddd-ddd-dddd \n" + 
+                    "Please go back and fix your phone number";
+          // write error message into phoneError
+          errorAlert("phoneError", message)
+          myPhone.focus();
+          myPhone.select();
+          return false;
+        } else
+          clearError("phoneError");
+        return true;
+      }
+
+      // Add error message to error div
+      function errorAlert(errorDiv, message) {
+        var dom = document.getElementById(errorDiv);
+        // Create a text node
+        theMessage = document.createTextNode(message);
+        // add it to the errorDiv
+        dom.appendChild(theMessage);
+      }
+
+      // Remove message from error div
+      function clearError(errorDiv, message) {
+        var dom = document.getElementById(errorDiv);
+        // rmove error text
+        dom.removeChild(theMessage);
+      }
+
+      function validate() {
+        return (chkName() && chkPhone());
+      }
+    </script>
+    <style type="text/css">
+      .error {
+        color: red
+      }
+    </style>
+  </head>
+  <body>
+    <h3> Customer Information </h3>
+     <form method="post" action = "http://www.cpjobling.me/cgi-bin/echo_form.cgi">
+      <p>
+        <!-- Error message will appear here -->
+        <div class="error" id="custError"></div>
+        <input type = "text"  id = "custName" name="custName" 
+               placeholder="Last name, First name, Middle initial"
+               title="Please enter your name as 'Last name, First name, Middle initial'." />
+        <label for="custName">Name</label>
+        <br />
+        <br />
+        <!-- Error message will appear here -->
+        <div class="error" id="phoneError"></div>
+        <input type = "text"  id = "phone" name="phone"
+               placeholder="123-456-7890"
+               title="Please enter your telephone number matching pattern '123-456-7890'."/>
+        <label for="phone">Phone number</label>
+        <br />
+        <br />
+        <input type = "reset"  id = "reset" />
+        <input type = "submit"  id = "submit" />
+      </p>
+    </form>
+    <script type = "text/javascript">
+      // Set form element object properties to their
+      // corresponding event handler functions
+
+      document.getElementById("custName").onchange = chkName;
+      document.getElementById("phone").onchange = chkPhone;
+      document.getElementById("submit").onclick = validate;
+    </script>
+  </body>
+</html>

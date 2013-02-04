@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- popcorn3.html - This describes the popcorn sales form -->
+<html lang="en-gb">
+  <head>
+    <meta charset="utf-8" />
+    <title> Popcorn Sales - for PHP handling </title>
+  </head>
+  <body>
+    <form action = "popcorn3.php"
+    method = "post">
+      <h2> Welcome to Millennium Gymnastics Booster Club Popcorn
+      Sales </h2>
+      <table>
+        <!-- Text widgets for the customer's name and address -->
+        <tr>
+          <td> <label for="name">Buyer's Name:</label> </td>
+          <td>
+          <input id="name" type = "text" name = "name"
+          size = "30" required placeholder="Your name"/>
+          </td>
+        </tr>
+        <tr>
+          <td> <label for="street">Street Address:</label> </td>
+          <td>
+          <input id = "street" type = "text" name = "street"
+          size = "30" required placeholder = "Street"/>
+          </td>
+        </tr>
+        <tr>
+          <td> <label for="city">City, State, Zip:</label> </td>
+          <td>
+          <input type = "text" name = "city"
+          size = "30" required placeholder="City, State, Zip"/>
+          </td>
+        </tr>
+      </table>
+      <p />
+      <table border = "border">
+        <!-- First, the column headings -->
+        <tr>
+          <th> Product </th>
+          <th> Price </th>
+          <th> Quantity </th>
+        </tr>
+        <!-- Now, the table data entries -->
+        <tr>
+          <td> <label for="unpop">Unpopped Popcorn (1 lb.)</label></td>
+          <td> $3.00 </td>
+          <td align = "center">
+          <input id="unpop" type = "number" name = "unpop"
+          size = "3" min="0" pattern="\d+" />
+          </td>
+        </tr>
+        <tr>
+          <td> <label for="caramel">Caramel Popcorn (2 lb. canister)</label> </td>
+          <td> $3.50 </td>
+          <td align = "center">
+          <input id="caramel" type = "number" name = "caramel"
+          size = "3" min="0" pattern="\d+" />
+          </td>
+        </tr>
+        <tr>
+          <td> <label for="caramelnut">Caramel Nut Popcorn (2 lb. canister)</label> </td>
+          <td> $4.50 </td>
+          <td align = "center">
+          <input id = "caramelnut" type = "number" name = "caramelnut"
+          size = "3" min="0" pattern="\d+" />
+          </td>
+        </tr>
+        <tr>
+          <td> <label for="toffeynut">Toffey Nut Popcorn (2 lb. canister)</label> </td>
+          <td> $5.00 </td>
+          <td align = "center">
+          <input id= "toffeynut" type = "number" name = "toffeynut"
+          size = "3" min="0" pattern="\d" />
+          </td>
+        </tr>
+      </table>
+      <p />
+      <!-- The radio buttons for the payment method -->
+      <h3> Payment Method </h3>
+      <p>
+        <input id="visa" type = "radio" name = "payment" value = "visa"
+        checked = "checked" />
+        <label for="visa">Visa</label>
+        <br />
+        <input id="mc" type = "radio" name = "payment" value = "mc" />
+        <label for="mc">Master Card</label>
+        <br />
+        <input id="discover" type = "radio" name = "payment"
+        value = "discover" />
+        <label for="discover">Discover</label>
+        <br />
+        <input id="cheque" type = "radio" name = "payment" value = "check" />
+        <label for="cheque">Cheque</label>
+        <br />
+        <br />
+        <!-- The submit and reset buttons -->
+        <input type = "submit" value = "Submit Order" />
+        <input type = "reset" value = "Clear Order Form" />
+      </p>
+    </form>
+  </body>
+</html>

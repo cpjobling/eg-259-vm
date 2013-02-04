@@ -1,0 +1,26 @@
+==================================================
+PHP for Web Applications - Online Examples 
+==================================================
+
+:Supporting: Lecture 18  
+:Lecture Date: Monday 3rd December 2007
+:Prepared by: Dr Chris P.Jobling
+:Adapted from: Robert W. Sebasta, ''Programming the World-Wide Web'', 3rd Edition, Addison Wesley, 2006. 
+:Date: $LastChangedDate: 2007-11-20 13:24:48 +0000 (Tue, 20 Nov 2007) $
+
+The example from the Lecture
+---------------------------------------
+
+You can try the PHP example from "EG-259 - PHP for Web Applications"
+by following the link. The script has been installed in my user
+directory ``~/public_html`` on the web server ``eehope.swan.ac.uk``. The
+URL of this page is http://eehope.swan.ac.uk/~eechris/eg-259/examples/lecture18.
+
+* *Example 1*: PHP version of the popcorn ordering application < `popcorn3.html`_ >
+
+.. _popcorn3.html: popcorn3.html
+
+
+
+
+

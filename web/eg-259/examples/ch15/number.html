@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Cross-browser number input</title>
+  <script src="modernizr-2.5.3.js"></script>
+  <!-- the polyfill is number-poltfill.js. It needs jQuery and Modernizr -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <!-- In this case we just load the polyfill, it takes care of adding number type, 
+       attributes, behaviour and spinner controls. It must be loaded in the head before
+       the first form is defined. -->
+  <script src="number-polyfill/number-polyfill.js"></script>
+</head>
+
+<body>
+  <div>
+    <header>
+      <h1>Cross-browser number input</h1>
+    </header>
+    <p>Uses the <code>number-polyfill.js</code> script to add number functionality to browsers that don't have number support.</p>
+
+    <form id="myForm" action="http://www.cpjobling.me/cgi-bin/echo_form.cgi" method="post">
+      <label for="selection">Pick a number</label> 
+      <input type="number" min="0" max="10" step="1" value="5"/>
+      <input type="submit" value="Go">
+    </form>  
+
+    <footer>
+     <p>&copy; Copyright 2012 by Swansea University</p>
+    </footer>
+  </div>
+</body>
+</html>

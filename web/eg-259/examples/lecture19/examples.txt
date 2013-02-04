@@ -1,0 +1,28 @@
+==================================================
+Database Access Through the Web - Online Examples 
+==================================================
+
+:Supporting: Lecture 19  
+:Lecture Date: Tuesday 4th December 2007
+:Prepared by: Dr Chris P.Jobling
+:Adapted from: Robert W. Sebasta, ''Programming the World-Wide Web'', 3rd Edition, Addison Wesley, 2006. 
+:Date: $LastChangedDate: 2007-11-20 13:24:48 +0000 (Tue, 20 Nov 2007) $
+
+The example from the Lecture
+---------------------------------------
+
+You can try the PHP examples from "EG-259 - Database Access Through the Web"
+by following the links. The ''cars'' database and the scripts have been 
+installed on the web server ``eehope.swan.ac.uk``. The
+URL of this page is http://eehope.swan.ac.uk/~eechris/eg-259/examples/lecture19.
+
+* *Example 1*: Submitting a Query from PHP < `carsdata.html`_ >
+* *Example 2*: Combined form and Query in PHP < `access_cars2.php`_ >
+
+.. _carsdata.html: carsdata.html
+.. _access_cars2.php: access_cars2.php
+
+
+
+
+

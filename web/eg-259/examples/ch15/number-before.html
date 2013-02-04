@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Cross-browser number input</title>
+</head>
+
+<body>
+  <div>
+    <header>
+      <h1>Cross-browser number input</h1>
+    </header>
+    
+    <p>At the time of writing this works in Chrome, Safari and Opera but not in Firefox 10.</p>
+    <p>I haven't tested it in IE 9</p>
+
+    <form id="myForm" action="http://www.cpjobling.me/cgi-bin/echo_form.cgi" method="post">
+      <label for="selection">Pick a number</label> 
+      <input type="number" min="0" max="10" step="1" value="5"/>
+      <input type="submit" value="Go">
+    </form>  
+
+    <footer>
+     <p>&copy; Copyright 2012 by Swansea University</p>
+    </footer>
+  </div>
+</body>
+</html>

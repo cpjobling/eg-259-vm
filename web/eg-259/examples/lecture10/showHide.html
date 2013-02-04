@@ -1,0 +1,45 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<!-- showHide.html
+     Illustrates visibility control of elements
+     -->
+<html xmlns = "http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title> Visibility control </title>
+    <script type = "text/javascript">
+<!--
+// ********************************************************
+// The event handler function to toggle the visibility 
+//    of the images of Saturn 
+
+     function flipImag() {
+       dom = document.getElementById("saturn").style;  
+
+// Flip the visibility adjective to whatever it is not now 
+
+      if (dom.visibility == "visible")
+        dom.visibility = "hidden";
+      else
+        dom.visibility = "visible";
+    }
+// ********************************************************
+// -->
+    </script>
+  </head>
+  <body>
+    <form action = "">
+      <div id = "saturn"  style = "position: relative; 
+           visibility: visible;">
+        <img src = "../images/saturn.jpg" 
+             alt = "(Picture of Saturn)" />
+      </div>
+      <p>
+        <br />
+        <input type = "button"  value = "Toggle Saturn"
+               onclick = "flipImag()" />
+      </p>
+    </form>
+  </body>
+</html>

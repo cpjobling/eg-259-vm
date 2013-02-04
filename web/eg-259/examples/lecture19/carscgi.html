@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- carsdata.html
+Uses a form to collect a query against the cars
+database.
+Calls the PHP script, access_cars.php to perform
+the given query and display the results
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title> Access to the corvettes database </title>
+  </head>
+  <body>
+    <p>
+      Try:       <pre>
+SELECT Vette_id, Body_style, Year, States.State
+FROM Corvettes, States
+WHERE Corvettes.State = States.State_id AND States.State = 'California'
+</pre>
+      Please enter your query
+      <br />
+      <form action  = "/~eechris/cgi-bin/access_cars.cgi" method = "post">
+        <textarea  rows = "2"  cols = "80" name = "query" >
+        </textarea>
+        <br />
+        <br />
+        <input type = "reset"  value = "Reset" />
+        <input type = "submit"  value = "Submit request" />
+      </form>
+    </p>
+  </body>
+</html>

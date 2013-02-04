@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- hello_js_world.html: An Example JavaScript script -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title> Our first JavaScript script </title>
+    <script>
+      function describe() {
+        var major = parseInt(navigator.appVersion);
+        var minor = parseFloat(navigator.appVersion);
+        var agent = navigator.userAgent.toLowerCase();
+        document.write("<h1>Details in Popup<\/h1>");
+        document.close();
+        window.alert(agent + " " + major);
+      }
+
+      function farewell() {
+        window.alert("Farewell and thanks for visiting");
+      }
+    </script>
+  </head>
+  <body onload="describe()" onunload="farewell()"></body>
+</html>
