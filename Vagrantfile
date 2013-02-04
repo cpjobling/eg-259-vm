@@ -32,6 +32,7 @@ Vagrant::Config.run do |config|
 
   config.vm.share_folder "puppet", "/etc/puppet", "./puppet" 
   config.vm.share_folder "web", "/var/www", "./web" 
+  config.vm.share_folder "cgi-bin", "/usr/lib/cgi-bin", "./cgi-bin"
   
   # Set the Timezone to something useful
   config.vm.provision :shell, :inline => "echo \"Europe/London\" | sudo tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata"
