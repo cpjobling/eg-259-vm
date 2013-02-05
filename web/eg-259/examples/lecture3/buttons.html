@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- buttons.html
+The submit and reset buttons ... and a plain old button.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title> Buttons </title>
+  </head>
+  <body>
+    <form action = "/cgi-bin/echo_params.cgi">
+      <p>
+        Note that the button label is the value. Name is not required
+        for buttons. Pressing the submit button will cause the default <em>action</em> to happen as defined by the enclosing form element. Pressing reset returns the form to its initial state. Pressing
+        a <em>button</em> button results in no action unless the button has a JavaScript event handler attached.
+      </p>
+      <p>  
+        <input type="reset" value="Reset form" />
+        <input type="submit" value="Submit form" />
+        + a plain old button
+        <input type="button" value="Press me!" />
+      </p>
+    </form>
+  </body>
+</html>
