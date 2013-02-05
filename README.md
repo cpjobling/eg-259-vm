@@ -108,6 +108,11 @@ Furthermore, because you have Git installed, you can develop your web
 site and web applications in the knowledge that your work can be version
 controlled.
 
+## Keeping Up to Date
+
+To keep the software up to date, simply change directory to eg-259 and run `git pull`. If you have a github account
+you can watch the repository to be informed when updates happen.
+
 ## Contributing
 
 - [Follow this project](https://help.github.com/articles/be-social). 
