@@ -11,7 +11,7 @@ Last session Tuesday 12th February 2013
 
 ### The Examples
 
-* [Hello JavaScript World](hello_js_world.html) -- Code: [hello_js_world.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture5/hello_js_world.html.html)
+* [Hello JavaScript World](hello_js_world.html) -- Code: [hello_js_world.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture5/hello_js_world.html)
 * [Real Roots of a Quadratic Equation](roots.html) -- Code: [roots.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture5/roots.html)
 
 ### Hungry for more?
