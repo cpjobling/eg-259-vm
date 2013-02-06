@@ -49,11 +49,15 @@
         
         <script>
         // The actual JavaScript code goes here
+
+        // Define point in DOM where result will be appended as HTML
+        var result_element = $('#result');
+        
         function describe() {
            var major = parseInt(navigator.appVersion);
            var minor = parseFloat(navigator.appVersion);
            var agent = navigator.userAgent.toLowerCase();
-           $('#result').append("<h2>Details in Popup<\/h3>");
+           result_element.append("<h2>Details in Popup<\/h3>");
            window.alert(agent + " " + major);
          }
 
