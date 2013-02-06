@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Chris Jobling -- Lecturer -- @cpjobling
+
+# THANKS
+
+    All the ICCT students who have taken this module over the years
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr
