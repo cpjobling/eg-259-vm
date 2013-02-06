@@ -28,8 +28,8 @@ The EG-259 VM has the following features:
 - Ubuntu 12.04.1 LTS (Precise Pangolin) server (32 bit) with RVM and Ruby 1.9.3 packaged as a Vagrant base box
 - A Puppet provisioning script which automatically installs a LAMP stack consisting of the Apache 2 Web server, PHP Version 5 and MySQL
 - phpMyAdmin is included for web-based administration of the MySQL database
-- All the examples from the module will be made evailable via regular updates (use `git pull` periodically)
 - A fully configured custom-built starter web application built by [HTML5 Boilerplate](http://html5boilerplate.com/) and [Initializr](http://www.initializr.com/) from responsive [Twitter Bootstrap](http://twitter.github.com/bootstrap/).
+- All the examples from the module will be made evailable via regular updates (use `git pull` periodically)
 
 ## Getting Started
 
