@@ -1,6 +1,4 @@
-<?xml version = "1.0" encoding = "utf-8"?>
-<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html>
 
 <!-- roots.html 
      Compute the real roots of a given quadratic
@@ -8,32 +6,81 @@
      displays NaN, because that is what results from 
      taking the square root of a negative number
      -->
-<html xmlns = "http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head>
-    <title> Real roots of a quadratic equation </title>
-  </head>
-  <body>
-    <script type = "text/javascript">
-      <!--
 
-// Get the coefficients of the equation from the user
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Real roots of a quadratic equation</title>
+        <meta name="viewport" content="width=device-width">
 
-      var a = prompt("What is the value of 'a'? \n", "");
-      var b = prompt("What is the value of 'b'? \n", "");
-      var c = prompt("What is the value of 'c'? \n", "");
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="css/main.css">
 
-// Compute the square root and denominator of the result
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
 
-      var root_part = Math.sqrt(b * b - 4.0 * a * c);
-      var denom = 2.0 * a;
+        <div class="container">
+            <h1>Real roots of a quadratic equation</h1>
 
-// Compute and display the two roots
+            <p>Use this file as a template for your own JavaScript experiments.
 
-      var root1 = (-b + root_part) / denom;
-      var root2 = (-b - root_part) / denom;
-      document.write("The first root is: ", root1, "<br />");
-      document.write("The second root is: ", root2, "<br />"); 
-      // -->
-    </script>
-  </body>
+
+            <div id="result"><!-- Result will be appended to this div--></div>
+
+            <a href="../index.html">Back to examples</a>
+
+            <hr>
+            <footer>
+                <p>&copy; Swansea University 2013</p>
+            </footer>
+
+        </div> <!-- /container -->
+       
+       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/plugins.js"></script>
+        
+        <script>
+            // The actual JavaScript code goes here
+
+            // Declare variables we'll be using
+            var 
+              result_element,
+              a, b, c,
+              root_part, denom,
+              root1, root2;
+
+            // Find point in DOM where result will be appended as HTML
+            result_element = $('#result');
+              
+            // Get the coefficients of the equation from the user
+            a = prompt("What is the value of 'a'? \n", "");
+            b = prompt("What is the value of 'b'? \n", "");
+            c = prompt("What is the value of 'c'? \n", "");
+
+            // Compute the square root and denominator of the result
+            root_part = Math.sqrt(b * b - 4.0 * a * c);
+            denom = 2.0 * a;
+
+            // Compute and display the two roots
+            root1 = (-b + root_part) / denom;
+            root2 = (-b - root_part) / denom;
+            
+            // Display results in page
+            result_element.append("<p>The first root is: " + root1 + "<br />");
+            result_element.append("The second root is: " + root2 + "</p>"); 
+         </script>
+    </body>
 </html>

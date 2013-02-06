@@ -1,32 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+
 <!-- hello_js_world.html: An Example JavaScript script -->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang=
-"en">
-  <head>
-    <title>
-      Our first JavaScript script
-    </title>
-<script language="javascript" type="text/javascript">
-//<![CDATA[
-         <!-- 
-         function describe() {
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Our first JavaScript script</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body onload="describe()">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="container">
+            <h1>Our first JavaScript script</h1>
+
+            <p>Use this file as a template for your own.
+
+
+            <div id="result"></div>
+
+            <a href="../index.html" onclick="farewell();">Back to examples</a>
+
+            <hr>
+            <footer>
+                <p>&copy; Swansea University 2013</p>
+            </footer>
+
+        </div> <!-- /container -->
+       
+       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/plugins.js"></script>
+        
+        <script>
+        // The actual JavaScript code goes here
+        function describe() {
            var major = parseInt(navigator.appVersion);
            var minor = parseFloat(navigator.appVersion);
            var agent = navigator.userAgent.toLowerCase();
-           document.write("<h1>Details in Popup<\/h1>");
-           document.close();
+           $('#result').append("<h2>Details in Popup<\/h3>");
            window.alert(agent + " " + major);
          }
 
          function farewell() {
            window.alert("Farewell and thanks for visiting");
          }
-         // -->
-//]]>
-</script>
-  </head>
-  <body onload="describe()" onunload="farewell()">
-  </body>
+         </script>
+
+    </body>
 </html>
