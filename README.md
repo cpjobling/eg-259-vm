@@ -111,16 +111,25 @@ controlled.
 
 ## Building Web Apps with this Setup
 
-The folder `web` is mapped onto the guest operating systems document root at startup. In other words, `web` becomes http://localhost:4567/ and the index.html file in that folder will be displayed. This file is the [HTML5 Boilerplate](http://html5boilerplate.com/) template file and can be used as the starting point for developing your own web application. If you explore the contents of the `web` folder you will see that it contains additional assets including example favicons needed for web and mobile apps, an `.htaccess` file that customizes the example app for running on Apache, a `404.html` page, `robots.txt`, `humans.txt` and the CSS, JavaScript and image assets needed to implement the Twitter Bootstrap template.
+The folder `web` is mapped onto the guest operating systems document root at startup. In other words, `web` becomes http://localhost:4567/ and the index.html file in that folder will be displayed. 
 
-To find out more about these assets and their purpose, read the documentation on the [HTML5 Boilerplate](http://html5boilerplate.com/) and [Twitter Bootstrap](http://twitter.github.com/bootstrap/) sites.
+The file `web/index.html' is a [HTML5 Boilerplate](http://html5boilerplate.com/) template file and can be used as the starting point for developing your own web application. If you explore the contents of the `web` folder you will see that it contains additional assets including example favicons needed for web and mobile apps, an `.htaccess` file that customizes the example app for running on Apache, a `404.html` page, `robots.txt`, `humans.txt` and the CSS, JavaScript and image assets needed to implement the Twitter Bootstrap template. To find out more about these assets and their purpose, read the documentation on the [HTML5 Boilerplate](http://html5boilerplate.com/) and [Twitter Bootstrap](http://twitter.github.com/bootstrap/) sites.
 
-If you examine the code of HTML page `web/index.html` you will notice that it contains a lots of "boilerplate" code. This code is designed to ensure that your web app will run on most browsers, will be responsive, can be tracked with Google Analytics, loads the latest versions of [jQuery](http://jquery.com/) and [Modernizr](http://modernizr.com/) etc. The code is the result of man-years of hard-learned lessons that web developers gained over the years. They are encoded into the HTML so you can take advantage of industry recognised best-practices from the off.
+If you examine the code of HTML page `web/index.html` you will notice that it contains a lots of "boilerplate" code. This code is designed to ensure that your web app will run on most browsers, will be responsive, can be tracked with Google Analytics, loads the latest versions of [jQuery](http://jquery.com/) and [Modernizr](http://modernizr.com/), etc. The code is the result of man-years of hard-learned lessons that web developers have gained over the years. They are encoded into the HTML so you can take advantage of industry recognised best-practices from the off.
 
 ## Keeping Up to Date
 
 To keep the software up to date, simply change directory to eg-259 and run `git pull`. If you have a github account
 you can watch the repository to be informed when updates happen.
+
+
+## Tools and Technologies Used
+
+1. [HTML5 Boilerplate](http://html5boilerplate.com/) -- "The world's most popular [web app] front-end template"
+2. [Twitter Bootstrap](http://twitter.github.com/bootstrap/) -- "Sleek, intuitive, and powerful front-end framework for faster and easier web development."
+3. [Initializr](http://www.initializr.com/) -- "Start an HTML5 project in 15 seconds!"
+4. [jQuery](http://jquery.com/) -- "The write less, do more JavaScript library"
+5. [Modernizr](http://modernizr.com/) -- "the feature detection library for HTML5 and CSS3"
 
 ## Contributing
 
@@ -142,12 +151,6 @@ net.tustsplus.com, August 20, 2012.
    Installation](http://awaseroot.wordpress.com/2012/04/30/puppet-module-for-lamp-installation/),
 awaseroot.wordpress.com, April 30, 2012.
 
-## Tools and Technologies Used
 
-1. [HTML5 Boilerplate](http://html5boilerplate.com/) -- "The world's most popular [web app] front-end template"
-2. [Twitter Bootstrap](http://twitter.github.com/bootstrap/) -- "Sleek, intuitive, and powerful front-end framework for faster and easier web development."
-3. [Initializr](http://www.initializr.com/) -- "Start an HTML5 project in 15 seconds!"
-4. [jQuery](http://jquery.com/) -- "The write less, do more JavaScript library"
-5. [Modernizr](http://modernizr.com/) -- "the feature detection library for HTML5 and CSS3"
 
 
