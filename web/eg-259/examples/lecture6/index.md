@@ -14,8 +14,9 @@ Last session Wednesday 13th February 2013
 * [template.html](template.html) -- use as a runner for the JavaScript examples (code: [template.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture6/template.html))
 * [If-then-Else](http://jsfiddle.net/cpjobling/8x8Ad/3/) -- Code: [if_then_else.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture6/if_then_else.js)
 * [Dates and Loops](http://jsfiddle.net/cpjobling/8x8Ad/5/) -- Code: [date.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture6/date.js)
-* [Objects in JavaScript](http://jsfiddle.net/cpjobling/THrt4/3/) -- Code: [objects.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture6/objects.js)
-* insert_names
+* [Objects in JavaScript](http://jsfiddle.net/cpjobling/THrt4/4/) -- Code: [objects.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture6/objects.js)
+* [Arrays in JavaScript](http://jsfiddle.net/cpjobling/bJUZ2/4/) -- Code: [arrays.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture6/arrays.js)
+* [Name List](http://jsfiddle.net/cpjobling/mKaqy/2/) -- Code: [insert_names.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture6/insert_names.js)
 * medians
 * nested_arrays
 * parameters

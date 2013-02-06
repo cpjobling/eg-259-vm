@@ -31,3 +31,8 @@ element.append("<p>Now I can fly a " + myAirplane.make  + " " +
 delete myCar.model;
 element.append("<p>My " + myCar.make  + " is " + 
                myCar.model + ".</p>");
+
+// Another loop
+for (var property in myAirplane) {
+    element.append("<p>" + property + ": " + myAirplane[property] + "</p>");
+}
