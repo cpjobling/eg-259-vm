@@ -70,7 +70,7 @@ Apache PHP MySQL) server.
     vagrant up 
 
 The first time you do this, there will be a delay of a few minutes
-while an image file is downloaded from the Internet, copied into VirtualBox and started up. There will then be another short delay while the LAMP stack is downlowded and installed. After this initial set-up time, `vagrant up` loads the virtual machine up very 
+while an image file is downloaded from the Internet, copied into VirtualBox and started up. There will then be another short delay while the LAMP stack is downloaded and installed. After this initial set-up time, `vagrant up` loads the virtual machine up very 
 quickly.
 
 Even better, you will have an identical copy
@@ -114,14 +114,13 @@ controlled.
 The folder `web` is mapped onto the guest operating systems document root at startup. In other words, `web` becomes http://localhost:4567/ and the index.html file in that folder will be displayed. 
 
 The file [web/index.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/index.html) 
-is a [HTML5 Boilerplate](http://html5boilerplate.com/) template file and can be used as the starting point for developing your own web application. If you explore the contents of the `web` folder you will see that it contains additional assets including example favicons needed for web and mobile apps, an `.htaccess` file that customizes the example app for running on Apache, a `404.html` page, `robots.txt`, `humans.txt` and the CSS, JavaScript and image assets needed to implement the Twitter Bootstrap template. To find out more about these assets and their purpose, read the documentation on the [HTML5 Boilerplate](http://html5boilerplate.com/) and [Twitter Bootstrap](http://twitter.github.com/bootstrap/) sites.
+is a [HTML5 Boilerplate](http://html5boilerplate.com/) template file and can be used as the starting point for developing your own web application. If you explore the contents of the `web` folder you will see that it contains additional assets including example favicons needed for web and mobile apps, an `.htaccess` file that optimizes the example app for running on Apache, a `404.html` page, `robots.txt`, `humans.txt` and the CSS, JavaScript and image assets needed to implement the Twitter Bootstrap template. To find out more about these assets and their purpose, read the documentation on the [HTML5 Boilerplate](http://html5boilerplate.com/) and [Twitter Bootstrap](http://twitter.github.com/bootstrap/) sites.
 
-If you examine the code of HTML page `web/index.html` you will notice that it contains a lots of "boilerplate" code. This code is designed to ensure that your web app will run on most browsers, will be responsive, can be tracked with Google Analytics, loads the latest versions of [jQuery](http://jquery.com/) and [Modernizr](http://modernizr.com/), etc. The code is the result of man-years of hard-learned lessons that web developers have gained over the years. They are encoded into the HTML so you can take advantage of industry recognised best-practices from the off.
+If you examine the code of HTML page `web/index.html` you will notice that it contains a lots of "boilerplate" code. This code is designed to ensure that your web app will run on most browsers, will be responsive, can be tracked with Google Analytics, loads the latest versions of [jQuery](http://jquery.com/) and [Modernizr](http://modernizr.com/), etc. The code is the result of man-years of hard-learned lessons that professional web developers have gained and generously contributed to the community. They are encoded into the HTML so you can take advantage of industry recognised best-practices from the off.
 
 ## Keeping Up to Date
 
-To keep the software up to date, simply change directory to eg-259 and run `git pull`. If you have a github account
-you can watch the repository to be informed when updates happen.
+To keep the software up to date, simply change directory to `eg-259-vm` and run `git pull`. If you have a github account you can watch the repository to be informed when updates happen.
 
 
 ## Tools and Technologies Used
