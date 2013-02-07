@@ -17,11 +17,10 @@ Last session Wednesday 13th February 2013
 * [Objects in JavaScript](http://jsfiddle.net/cpjobling/THrt4/4/) -- Code: [objects.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture6/objects.js)
 * [Arrays in JavaScript](http://jsfiddle.net/cpjobling/bJUZ2/4/) -- Code: [arrays.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture6/arrays.js)
 * [Name List](http://jsfiddle.net/cpjobling/mKaqy/2/) -- Code: [insert_names.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture6/insert_names.js)
-* medians
-* nested_arrays
-* parameters
-* constructors
-* functions
+* [Nested arrays](http://jsfiddle.net/cpjobling/XT4vg/1/) - Code: [nested_arrays.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture6/nested_arrays.js)
+* [Function parameters](http://jsfiddle.net/cpjobling/m8JAL/6/) --  Code: [parameters.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture6/parameters.js)
+* [Another Example - Medians](http://jsfiddle.net/cpjobling/vwYGr/3/) -- Code: [medians.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture6/medians.js)
+* [Constructors](http://jsfiddle.net/cpjobling/s8kFw/6/) -- Code: [constructors.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture6/constructors.js)
 
 ### Hungry for more?
 
