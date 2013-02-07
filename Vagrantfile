@@ -24,7 +24,7 @@ Vagrant::Config.run do |config|
   config.vm.box = "precise32_for_eg259"
   config.vm.box_url = "https://dl.dropbox.com/u/172477/eg-259/vbox/precise32_for_eg259.box"
 
-  config.vm.customize ["modifyvm", :id, "--name", "eg259box", "--memory", "512"]
+  config.vm.customize ["modifyvm", :id, "--memory", "512"]
   config.vm.host_name = "eg259box"
   config.vm.forward_port 22, 2222, :auto => true
   config.vm.forward_port 80, 4567
