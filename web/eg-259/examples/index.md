@@ -8,4 +8,5 @@ You should run `git pull` frequently in your copy of the eg-259-vm repository to
 * [Web Forms](lecture3)
 * [Getting started with JavaScript](lecture5)
 * [Programming JavaScript](lecture6)
+* [Regular Expressions](lecture7)
 
