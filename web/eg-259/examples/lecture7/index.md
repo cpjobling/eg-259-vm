@@ -13,6 +13,9 @@ Last session Tuesday 19th February 2013
 
 * Example Runner [RegexPal](http://regexpal.com/)
 * [Regular Expressions Cheat Sheet](cheat.html)
+* [Forms Check with JavaScript](forms_check.html) -- Code: [forms_check.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture7/forms_check.html)
+* [Forms Check Script]() -- Code: [forms_check.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture7/forms_check.js)
+* [Forms Check with HTML5 Validator](forms_check_html5.html) -- Code: [forms_check_html5](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture7/forms_check_html5.html)
 
 ### Hungry for more?
 

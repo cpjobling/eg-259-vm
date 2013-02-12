@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- forms_check.html
+A function tst_phone_num is defined and tested.
+This function checks the validity of phone
+number input from a form
+--> 
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title> Phone number tester </title>
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Phone Number Tester</h1>
+
+      <p>An example of the use of Regular Expressions for form validation. 
+         View source to see the HTML code and use your browser's development tools to view the JavaScript.</p>
+      <p>Phone numbers should match the pattern 3 digits followed by a dash followed by four 
+         digits. The regular expression for this is <code>/\d{3}-\d{4}/</code>.
+      </p>
+      <p>The example uses the DOM 0 event model which will be discussed in the next session.</p>
+      <form id="phone" method="post" action="/cgi-bin/echo_form.cgi" onsubmit="validate();">
+        <label for="phone_number">Phone number: </label>
+        <input id="phone_number" type="text" name="phone_number" placeholder="444-4444" 
+               title="Please enter phone number using the pattern ddd-dddd."/>
+        <input type="submit" name="Submit" value="Submit" />
+      </form>
+    </div> <!-- /container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <!-- The actual forms_check script -->
+    <script src="forms_check.js"></script>
+  </body>
+</html>
