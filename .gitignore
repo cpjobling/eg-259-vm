@@ -1,6 +1,7 @@
 .vagrant
 .DS_Store
 web/wordpress
+nbproject
 
 
 
