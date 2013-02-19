@@ -18,7 +18,7 @@ Open each file then load your browser's developer tools and visit the <code>docu
 * [Checkboxes and Radio Buttons](radiobuttons.html) -- Code: [radiobuttons.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture8/radiobuttons.html)
 * [The onload event](load.html) -- Code: [load.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture8/load.html)
 * [Handling events from radio buttons](radio_click.html) -- Code: [radio_click.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture8/radio_click.html)
-
+* [Handling events from radio buttons - jQuery version](radio_click_jquery.html) -- Code: [radio_click_jquery.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture8/radio_click_jquery.html)
 ### Hungry for more?
 
 The material covered in Contact Hour 11 is covered in much more detail and with plenty of interactive examples in [Chapter 11](http://eloquentjavascript.net/chapter11.html) of Eloquent JavaScript [1].
