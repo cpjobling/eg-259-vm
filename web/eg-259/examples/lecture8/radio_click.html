@@ -2,41 +2,25 @@
 <!-- radio_click.hmtl
 An example of the use of the click event with radio buttons,
 registering the event handler by assignment to the button
-attributes
--->
-<html lang="en">
+attributes -->
+<html class="no-js" lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title> Illustrate messages for radio buttons </title>
-    <script type = "text/javascript">
-      // The event handler for a radio button collection
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Illustrate messages for radio buttons</title>
+    <meta name="viewport" content="width=device-width">
 
-      function planeChoice(plane) {
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/main.css">
 
-        // Produce an alert message about the chosen airplane
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Illustrate messages for radio buttons</h1>
 
-        switch (plane) {
-          case 152:
-            alert("A small two-place airplane for flight training");
-            break;
-          case 172:
-            alert("The smaller of two four-place airplanes");
-            break;
-          case 182:
-            alert("The larger of two four-place airplanes");
-            break;
-          case 210:
-            alert("A six-place high-performance airplane");
-            break;
-          default:
-            alert("Error in JavaScript function planeChoice");
-            break;
-        }
-      }
-    </script>
-    </head>
-    <body>
-    <h4> Cessna single-engine airplane descriptions </h4>
+      <h2> Cessna single-engine airplane descriptions </h2>
       <form id = "myForm"  action = "handler">
         <p>
           <input type = "radio"  name = "planeButton"  value = "152"
@@ -53,5 +37,41 @@ attributes
             Model 210 (Centurian)
          </p>
       </form>
-    </body>
+
+    </div> <!-- /container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <!-- Any external JS loaded here -->
+    <script>
+      // The event handler for a radio button collection
+
+      var planeChoice = function(plane) {
+
+        // Produce an alert message about the chosen airplane
+
+        switch (plane) {
+          case "152":
+            alert("A small two-place airplane for flight training");
+            break;
+          case "172":
+            alert("The smaller of two four-place airplanes");
+            break;
+          case "182":
+            alert("The larger of two four-place airplanes");
+            break;
+          case "210":
+            alert("A six-place high-performance airplane");
+            break;
+          default:
+            alert("Error in JavaScript function planeChoice");
+            break;
+        };
+      }
+    </script>
+
+  </body>
 </html>

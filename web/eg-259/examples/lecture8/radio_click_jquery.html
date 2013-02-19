@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- radio_click_jquery.hmtl
+An example of the use of the click event with radio buttons,
+registering the event handler by assignment to the button
+attributes. This version has been don using jQuery. -->
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Illustrate messages for radio buttons</title>
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Illustrate messages for radio buttons</h1>
+
+      <h2> Cessna single-engine airplane descriptions </h2>
+      <form id = "myForm"  action = "handler">
+        <p>
+          <input type = "radio"  name = "planeButton"  value = "152">
+            Model 152 <br />
+         <input type = "radio"  name = "planeButton"  value = "172">
+            Model 172 (Skyhawk) <br />
+         <input type = "radio"  name = "planeButton"  value = "182">
+            Model 182 (Skylane) <br />
+         <input type = "radio"  name = "planeButton"  value = "210">
+            Model 210 (Centurian)
+         </p>
+      </form>
+
+    </div> <!-- /container -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <!-- Any external JS loaded here -->
+    <script>
+      $(document).ready(function() {
+        // The event handler for a radio button collection
+
+        var planeChoice = function(plane) {
+
+          // Produce an alert message about the chosen airplane
+
+          switch (plane) {
+            case "152":
+              alert("A small two-place airplane for flight training");
+              break;
+            case "172":
+              alert("The smaller of two four-place airplanes");
+              break;
+            case "182":
+              alert("The larger of two four-place airplanes");
+              break;
+            case "210":
+              alert("A six-place high-performance airplane");
+              break;
+            default:
+              alert("Error in JavaScript function planeChoice");
+              break;
+          }
+        };
+
+        // Register the events
+        $('#myForm input[type="radio"]').on('click', function(event) {
+          planeChoice($(this).val());
+        });
+      });
+    </script>
+
+  </body>
+</html>

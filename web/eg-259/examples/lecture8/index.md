@@ -11,7 +11,13 @@ Last session Wednesday 20th February 2013
 
 ### The Examples
 
-* [The Dom](dom.html) (Open then load Developer Tools and visit <code>document</code>) - Code: [forms_check.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture8/dom.html)
+Open each file then load your browser's developer tools and visit the <code>document</code> object to explore the DOM.
+
+* [The Dom](dom.html) -- Code: [dom.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture8/dom.html)
+* [A Simple form](form.html) -- Code [form.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture8/form.html)
+* [Checkboxes and Radio Buttons](radiobuttons.html) -- Code: [radiobuttons.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture8/radiobuttons.html)
+* [The onload event](load.html) -- Code: [load.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture8/load.html)
+* [Handling events from radio buttons](radio_click.html) -- Code: [radio_click.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture8/radio_click.html)
 
 ### Hungry for more?
 

@@ -1,17 +1,34 @@
 <!DOCTYPE html>
-<!-- radio_click.hmtl
-An example of the use of the click event with radio buttons,
-registering the event handler by assignment to the button
-attributes
--->
-<html lang="en">
+<!-- template HTML file --> 
+<html class="no-js" lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title> A Form </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title> A Form  </title>
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
   <body>
-    <form action = "" name="myForm" id="myForm"">
-      <input type = "button"  id = "pushMe" name = "pushMe" value="Push Me" />
-    </form>
+    <div class="container">
+      <h1>A Form</h1>
+
+      <form action ="" name="myForm" id="myForm"">
+        <input type = "button"  id = "pushMe" name = "pushMe" value="Push Me" />
+      </form>
+
+    </div> <!-- /container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <!-- Uncomment next line and add any external JS to be loaded here -->
+    <!-- <script src="js/app.js"></script> -->
   </body>
 </html>
