@@ -9,4 +9,5 @@ You should run `git pull` frequently in your copy of the eg-259-vm repository to
 * [Getting started with JavaScript](lecture5)
 * [Programming JavaScript](lecture6)
 * [Regular Expressions](lecture7)
-
+* [JavaScript and HTML (Part 1)](lecture8)
+* [JavaScript and HTML (Part 2)](lecture9)
