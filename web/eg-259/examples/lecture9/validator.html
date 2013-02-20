@@ -3,85 +3,50 @@
 An example of input validation using the change and submit
 events
 -->
-<html lang="en">
+<html class="no-js" lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title> Illustrate form input validation> </title>
-    <script>
-      // The event handler function for the name text box
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Illustrate form input validation</title>
+    <meta name="viewport" content="width=device-width">
 
-      function chkName() {
-        var myName = document.getElementById("custName");
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/main.css">
 
-        // Test the format of the input name
-        //  Allow the spaces after the commas to be optional
-        //  Allow the period after the initial to be optional
-
-        var pos = myName.value.search(/^[A-Z][a-z]+, ?[A-Z][a-z]+, ?[A-Z]\.?$/);
-
-        if(pos != 0) {
-          alert("The name you entered (" + myName.value + ") is not in the correct form. \n" + 
-                "The correct form is: " + "Last name, First name, Middle initial \n" + 
-                "Please go back and fix your name");
-          myName.focus();
-          myName.select();
-          return false;
-        } else
-          return true;
-      }
-
-      // The event handler function for the phone number text box
-
-      function chkPhone() {
-        var myPhone = document.getElementById("phone");
-
-        // Test the format of the input phone number
-
-        var pos = myPhone.value.search(/^\d{3}-\d{3}-\d{4}$/);
-
-        if(pos != 0) {
-          alert("The phone number you entered (" + myPhone.value + ") is not in the correct form. \n" + 
-                "The correct form is: ddd-ddd-dddd \n" + 
-                "Please go back and fix your phone number");
-          myPhone.focus();
-          myPhone.select();
-          return false;
-        } else
-          return true;
-      }
-      
-      function validate() {
-        return (chkName() && chkPhone());
-      }
-    </script>
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
   <body>
-    <h3> Customer Information </h3>
-    <form method="post" action = "http://www.cpjobling.me/cgi-bin/echo_form.cgi">
-      <p>
-        <input type = "text"  id = "custName" name="custName" 
-               placeholder="Last name, First name, Middle initial" 
-               title="Please enter your name as 'Last name, First name, Middle initial'." />
+    <div class="container">
+      <h1>Illustrate form input validation</h1>
+      <h2>Customer Information</h2>
+      <form method="post" action = "/cgi-bin/echo_params.cgi">
         <Label for="custName">Name</Label>
-        <br />
-        <br />
-        <input type = "text"  id = "phone" name="phone" 
-               placeholder="123-456-7890"
-               title="Please enter your telephone number matching pattern '123-456-7890'."/>
-        <label for="phone">Phone number</label>
-        <br />
-        <br />
-        <input type = "reset"  id = "reset" />
-        <input type = "submit"  id = "submit" />
-      </p>
+        <div class="control-group">
+          <input class="span4" type = "text"  id = "custName" name="custName" 
+                 placeholder="Last name, First name, Middle initial">
+          <span class="help-block">Please enter your name as 'Last name, First name, Middle initial'.</span>
+        </div>
+        <div class="control-group">
+          <label for="phone">Phone number</label>
+          <input class="span4" type = "text"  id = "phone" name="phone" 
+               placeholder="123-456-7890">
+          <span class="help-block">Please enter your telephone number matching pattern '123-456-7890'.</span>
+        </div>
+        <p>
+          <input class="btn" type = "reset"  id = "reset" />
+          <input class="btn btn-primary" type = "submit"  id = "submit" />
+        </p>
     </form>
-    <script>
-      // Set form element object properties to their
-      // corresponding event handler functions
 
-      document.getElementById("custName").onchange = chkName;
-      document.getElementById("phone").onchange = chkPhone;
-      document.getElementById("submit").onclick = validate;
-    </script>
+    </div> <!-- /container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <!-- Any external JS loaded here -->
+    <script src="validator.js"></script>
   </body>
 </html>
