@@ -15,6 +15,7 @@ Open each file then load your browser's developer tools and visit the <code>docu
 
 * [Handling Events from Button Elements](radio_click2.html) -- Code: [radio_click2.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/radio_click2.html) [radio_click2.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/radio_click2.js)
 * [The Focus Event](nochange.html) - Code: [nochange.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/nochange.html) [nochange.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/nochange.js)
+* [Password Check](pswd_chk.html) -- Code: [pswd_chk.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/pswd_chk.html) [pswd_chk.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/pswd_chk.js)
 
 ### Hungry for more?
 

@@ -1,55 +1,45 @@
 <!DOCTYPE html>
 <!-- pswd_chk.html
-An example of input password checking, using the submit
-event
+     An example of input password checking, using the onsubmit event
 -->
-<html lang="en">
+<html class="no-js" lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title> Illustrate password checking </title>
-    <script>
-      // The event handler for password checking
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Illustrate password checking</title>
+    <meta name="viewport" content="width=device-width">
 
-      function chkPasswords() {
-        var init = document.getElementById("initial");
-        var sec = document.getElementById("second");
-        if(init.value === "") {
-          alert("You did not enter a password \n" + "Please enter one now");
-          init.focus();
-          return false;
-        }
-        if(init.value !== sec.value) {
-          alert("The two passwords you enterd are not the same \n" + "Please re-enter both now");
-          init.focus();
-          init.select();
-          return false;
-        } else {
-          return true;
-        }
-      }
-    </script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
   <body>
-    <h3> Password Input </h3>
-    <form id = "myForm"  method="post" action = "http://www.cpjobling.me/cgi-bin/echo_form.cgi">
-      <p>
-        <label for="initial">Your password: </label>
-        <input type = "password"  name="password" id = "initial"  size = "10" />
-        <br />
-        <br />
-        <label for="second">Verify password: </label>
-        <input type = "password"  name="password_confirmation" id = "second"   size = "10" />
-        <br />
-        <br />
-        <input type = "reset"  name = "reset" />
-        <input type = "submit"  name = "submit" />
-      </p>
-    </form>
-    <script>
-      // Set submit button onsubmit property to the event handler
+    <div class="container">
+      <h1> Illustrate password checking </h1>
+      <h2> Choose a Password </h2>
+      <form id = "myForm"  method="post" action = "/cgi-bin/echo_params.cgi">
+        <p>
+          <label for="initial">Your password: </label>
+          <input type="password"  name="password" id="password" />
+          <label for="second">Verify password: </label>
+          <input type="password"  name="password_confirmation" id="password_confirmation" />
+        </p>
+        <p>
+          <input class="btn" type = "reset"  name = "reset" />
+          <input class="btn btn-primary" type = "submit"  name = "submit" />
+        </p>
+      </form>
 
-      document.getElementById("second").onblur = chkPasswords;
-      document.getElementById("myForm").onsubmit = chkPasswords;
-    </script>
+    </div> <!-- /container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <!-- Any external JS loaded here -->
+    <script src="pswd_chk.js"></script>
   </body>
 </html>
