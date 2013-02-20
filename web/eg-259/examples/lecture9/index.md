@@ -14,6 +14,7 @@ Last session Tuesday 26th February 2013
 Open each file then load your browser's developer tools and visit the <code>document</code> object to explore the DOM.
 
 * [Handling Events from Button Elements](radio_click2.html) -- Code: [radio_click2.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/radio_click2.html) [radio_click2.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/radio_click2.js)
+* [The Focus Event](nochange.html) - Code: [nochange.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/nochange.html) [nochange.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/nochange.js)
 
 ### Hungry for more?
 

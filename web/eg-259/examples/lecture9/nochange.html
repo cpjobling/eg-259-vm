@@ -1,81 +1,91 @@
 <!DOCTYPE html>
-<!-- nochange.html
-This document illustrates using the focus event
-to prevent the user from changing a text field
--->
-<html lang="en">
+<!-- template HTML file --> 
+<html class="no-js" lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title> The focus event </title>
-    <script>
-      // The event handler function to compute the cost
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Accessing Radio Buttons</title>
+    <meta name="viewport" content="width=device-width">
 
-      function computeCost() {
-        var french = document.getElementById("french").value;
-        var hazlenut = document.getElementById("hazlenut").value;
-        var columbian = document.getElementById("columbian").value;
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/main.css">
 
-        // Compute the cost
-
-        document.getElementById("cost").value = totalCost = french * 3.49 + hazlenut * 3.95 + columbian * 4.59;
-      }  //* end of computeCost
-    </script>
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
   <body>
-    <form method="post" action = "http://www.cpjobling.me/cgi-bin/echo_form.cgi">
-      <h3> Coffee Order Form </h3>
-      <!-- A bordered table for item orders -->
-      <table border="1" summary="order form for coffee">
-        <!-- First, the column headings -->
-        <thead>
-          <td> Product Name </td>
-          <td> Price </td>
-          <td> Quantity </td>
-        </thead>
-        <!-- Now, the table data entries -->
-        <tbody>
-          <tr>
-            <td> <label for="french">French Vanilla (500 g.)</label> </td>
-            <td> $3.49 </td>
-            <td>
-              <!-- Not use of the pattern attribute to ensure quantity is an integer
-                   For browsers that don't support the pattern attribute, you
-                   would need to include a JavaScript validation script that does the
-                   same thing -->
-            <input type = "text"  id = "french" name="french"
-            size ="2" pattern="^\d{1,}$"/>
-            </td>
-          </tr>
-          <tr>
-            <td> <label for="hazlenut">Hazlenut Cream (500 g.)</lable> </td>
-            <td> $3.95 </td>
-            <td>
-            <input type = "text"  id = "hazlenut" name="hazlenut"
-            size = "2" />
-            </td>
-          </tr>
-          <tr>
-            <td> <label for="columbian">Columbian (500 g.)</label> </td>
-            <td> $4.59 </td>
-            <td>
-            <input type = "text"  id = "columbian" name="columbian"
-            size = "2" />
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <!-- Button for precomputation of the total cost -->
-      <p>
-        <input type = "button"  value = "Total Cost"
-        onclick = "computeCost();" />
-        <input type = "text"  size = "5"  id = "cost"
-        onfocus = "this.blur();" />
-      </p>
-      <!-- The submit and reset buttons -->
-      <p>
-        <input type = "submit"  value = "Submit Order" />
-        <input type = "reset"  value = "Clear Order Form" />
-      </p>
-    </form>
+    <div class="container">
+         <h1>The Focus Event</h1>
+
+         <h2> Coffee Order Form </h2>
+
+        <form class="horizontal-form" method="post" action="http://www.cpjobling.me/cgi-bin/echo_form.cgi">
+            <!-- A bordered table for item orders -->
+            <table class="table table-striped" border="1" summary="order form for coffee">
+                <!-- First, the column headings -->
+                <thead>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </thead>
+                <!-- Now, the table data entries -->
+                <tbody>
+                    <tr class="control-group">
+                        <td>
+                            <label for="french">French Vanilla (500 g.)</label>
+                        </td>
+                        <td>$3.49</td>
+                        <td>
+                            <!-- Note use of the pattern attribute to ensure quantity is an integer
+                            For browsers that don't support the pattern attribute, you would need to
+                            include a JavaScript validation script that does the same thing -->
+                            <input class="span1" type="text" id="french" name="french" size="2" pattern="^\d{1,}$"
+                            />
+                        </td>
+                    </tr>
+                    <tr class="control-group">
+                        <td>
+                            <label for="hazlenut">Hazlenut Cream (500 g.)</label>
+                        </td>
+                        <td>$3.95</td>
+                        <td>
+                            <input class="span1" type="text" id="hazlenut" name="hazlenut" size="2"
+                            />
+                        </td>
+                    </tr>
+                    <tr class="control-group">
+                        <td>
+                            <label for="columbian">Columbian (500 g.)</label>
+                        </td>
+                        <td>$4.59</td>
+                        <td>
+                            <input class="span1" type="text" id="columbian" name="columbian" size="2"
+                            />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Button for precomputation of the total cost -->
+            <div class="input-append">
+                <input class="input-small" type="text" id="cost" onfocus="this.blur();"
+                />
+                <input class="btn btn-info" type="button" value="Total cost"/>
+            </div>
+            <!-- The submit and reset buttons -->
+            <p>
+                <input class="btn btn-primary" type="submit" value="Submit Order" />
+                <input class="btn" type="reset" value="Clear Order Form" />
+            </p>
+        </form>
+    </div>
+    <!-- /container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <!-- Any external JS loaded here -->
+    <script src="nochange.js"></script>
   </body>
 </html>
