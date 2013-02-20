@@ -17,7 +17,8 @@ Open each file then load your browser's developer tools and visit the <code>docu
 * [The Focus Event](nochange.html) - Code: [nochange.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/nochange.html) [nochange.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/nochange.js)
 * [Password Check](pswd_chk.html) -- Code: [pswd_chk.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/pswd_chk.html) [pswd_chk.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/pswd_chk.js)
 * [Form Validation](validator.html) -- Code: [validator.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/validator.html) [validator.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/validator.js)
-
+* [Form Validation with DOM 2 Events](validator2.html) -- Code: [validator2.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/validator2.html) [validator2.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/validator2.js)
+* [The Navigator Object](navigate.html) -- Code: [navigate.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/navigate.html)
 
 ### Hungry for more?
 
