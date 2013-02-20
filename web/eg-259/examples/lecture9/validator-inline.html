@@ -11,15 +11,52 @@ It doesn't use innerHTML to write error the message into the div,
 instead it uses DOM directly. Apparently innerHTML doesn't work
 in Mozilla when the document type is XHTML. Presumably because
 arbitrary text may not produce valid XML.
+
+This example also uses Bootstrap form controls.
 -->
-<html lang="en">
+<html class="no-js" lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title> Illustrate form input validation> </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Illustrate form input validation with in-line messages</title>
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Illustrate form input validation with in-line messages</h1>
+      <h3> Customer Information </h3>
+       <form method="post" action = "/cgi-bin/echo_params.cgi">
+        <p>
+          <!-- Error message will appear here -->
+          <div class="control-group" id="custError">
+            <label for="custName">Name</label>
+            <input type = "text"  id = "custName" name="custName" 
+                   placeholder="Last name, First name, Middle initial">
+            <span class="hide help-inline">Please enter your name as 'Last name, First name, Middle initial'.</span>
+          </div>
+          <div class="control-group" id="phoneError">
+            <label for="phone">Phone number</label>
+            <input type = "text"  id = "phone" name="phone" placeholder="123-456-7890">
+            <span class="hide help-inline">Please enter your telephone number matching pattern '123-456-7890'</span>
+          </div>
+          <input type = "reset"  id="reset" />
+          <input type = "submit"  id="submit" class="btn btn-primary"/>
+        </p>
+      </form>
+    </div><!-- container -->
+    <script src="js/vendor/jquery-1.9.0.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
     <script>
       // The event handler function for the name text box
 
-      function chkName() {
+      var chkName = function() {
         var myName = document.getElementById("custName");
 
         // Test the format of the input name
@@ -30,21 +67,22 @@ arbitrary text may not produce valid XML.
 
         if(pos != 0) {
           message = "The name you entered (" + myName.value + ") is not in the correct form. \n" + 
-                    "The correct form is: " + "Last name, First name, Middle initial\n" + 
-                    "Please go back and fix your name";
+                    "The correct form is: " + "\"Last name, First name, Middle initial\".\n" + 
+                    "Please go back and fix your name.";
           // write message into custError
           errorAlert("custError", message)
           myName.focus();
           myName.select();
           return false;
-        } else
+        } else {
           clearError("custError");
-        return true;
-      }
+          return true;
+        }
+      };
 
       // The event handler function for the phone number text box
 
-      function chkPhone() {
+      var chkPhone = function() {
         var myPhone = document.getElementById("phone");
 
         // Test the format of the input phone number
@@ -53,69 +91,50 @@ arbitrary text may not produce valid XML.
 
         if(pos != 0) {
           message = "The phone number you entered (" + myPhone.value + ") is not in the correct form. \n" + 
-                    "The correct form is: ddd-ddd-dddd \n" + 
+                    "The correct form is: \"ddd-ddd-dddd\".\n" + 
                     "Please go back and fix your phone number";
           // write error message into phoneError
           errorAlert("phoneError", message)
           myPhone.focus();
           myPhone.select();
           return false;
-        } else
+        } else {
           clearError("phoneError");
-        return true;
-      }
+          return true;
+        }
+      };
 
       // Add error message to error div
-      function errorAlert(errorDiv, message) {
+      var errorAlert = function(errorDiv, message) {
         var dom = document.getElementById(errorDiv);
+        // Change style
+        dom.className='control-group error';
+        var theSpan = document.createElement('span');
+        theSpan.className = 'help-inline';
         // Create a text node
         theMessage = document.createTextNode(message);
-        // add it to the errorDiv
-        dom.appendChild(theMessage);
-      }
+        // append it to the span
+        theSpan.appendChild(theMessage);
+        // append the span to the div
+        dom.appendChild(theSpan);
+      };
 
       // Remove message from error div
-      function clearError(errorDiv, message) {
+      var clearError = function (errorDiv, message) {
         var dom = document.getElementById(errorDiv);
-        // rmove error text
-        dom.removeChild(theMessage);
+        // reset class
+        dom.className = 'control-group';
+        // get all children
+        var span = dom.lastChild;
+        console.log(span);
+        // remove the span
+        dom.removeChild(span);
       }
 
-      function validate() {
+      var validate = function () {
         return (chkName() && chkPhone());
       }
-    </script>
-    <style type="text/css">
-      .error {
-        color: red
-      }
-    </style>
-  </head>
-  <body>
-    <h3> Customer Information </h3>
-     <form method="post" action = "http://www.cpjobling.me/cgi-bin/echo_form.cgi">
-      <p>
-        <!-- Error message will appear here -->
-        <div class="error" id="custError"></div>
-        <input type = "text"  id = "custName" name="custName" 
-               placeholder="Last name, First name, Middle initial"
-               title="Please enter your name as 'Last name, First name, Middle initial'." />
-        <label for="custName">Name</label>
-        <br />
-        <br />
-        <!-- Error message will appear here -->
-        <div class="error" id="phoneError"></div>
-        <input type = "text"  id = "phone" name="phone"
-               placeholder="123-456-7890"
-               title="Please enter your telephone number matching pattern '123-456-7890'."/>
-        <label for="phone">Phone number</label>
-        <br />
-        <br />
-        <input type = "reset"  id = "reset" />
-        <input type = "submit"  id = "submit" />
-      </p>
-    </form>
-    <script type = "text/javascript">
+      
       // Set form element object properties to their
       // corresponding event handler functions
 
