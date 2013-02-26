@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- validator.html
+An example of input validation using the change and submit
+events
+-->
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Illustrate form input validation</title>
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+         <h1>Illustrating jQuery</h1>
+
+        <section>
+             <h2> jQuery Events </h2>
+
+            <form id="myForm" action="/cgi-bin/echo_params.cgi">
+                <fieldset>
+                    <legend>Types of Plane</legend>
+                    <div class="control-group">
+                        <label class="radio">
+                            <input type="radio" name="planeButton" value="152" />Model 152</label>
+                        <label class="radio">
+                            <input type="radio" name="planeButton" value="172" />Model 172 (Skyhawk)</label>
+                        <label class="radio">
+                            <input type="radio" name="planeButton" value="182" />Model 182 (Skylane)</label>
+                        <label class="radio">
+                            <input type="radio" name="planeButton" value="210" />Model 210 (Centurian)</label>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+        <section>
+             <h2>Simplified Event Regsitration</h2>
+
+            <ol>
+                <li>Add an event listener to button labelled "Target" that shows an alert
+                    when it is clicked</li>
+                <li>Add an event listener to button labelled "Other" that clicks the "Target"
+                    button.</li>
+                <div class="control-group">
+                    <button id="target" class="btn">Target</button>
+                    <button id="other" class="btn">Other</button>
+                </div>
+            </ol>
+        </section>
+        <section>
+             <h2>The jQuery event object</h2>
+
+            <div id="outer">
+                <p>The event will bubble out from the button in the inner div. It should
+                    stop bubbling before it reaches the outer div and the form should not submit.</p>
+                <div
+                id="inner">
+                    <form name="myForm" action="http://www.google.co.uk/#hl=en" class="form-search">
+                        <div class="input-append">
+                            <input type="text" placeholder="type something" name="q" class="span2 search-query"
+                            />
+                            <button class="btn" type="submit">Search</button>
+                        </div>
+                    </form>
+            </div>
+            <!-- inner -->
+    </div>
+    <!-- outer -->
+    </section>
+    </div>
+    <!-- /container -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <!-- Any external JS loaded here -->
+    <script src="jquery_events.js"></script>
+  </body>
+</html>

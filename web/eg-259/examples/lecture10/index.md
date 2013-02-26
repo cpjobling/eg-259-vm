@@ -27,8 +27,8 @@ Most of the examples are provided as jsFiddle examples. You should open these an
 
 Served from the EG-259 Virtual Machine:
 
-* [Putting it All Together]() - Code:
-* [Example: Form Validation from previous lecture Implemented in jQuery]() - 
+* [Putting it All Together](jquery_events.html) - Code: [jquery_events.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture10/jquery_events.html) -- [jquery_events.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture10/jquery_events.js)
+* [Example: Form Validation from previous lecture Implemented in jQuery](validator.html) - Code: [validator.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture10/validator.js) (HTML is same as for [previous version](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/validator.html)).
 
 
 
