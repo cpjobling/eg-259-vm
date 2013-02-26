@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- validator.html
+An example of input validation using the change and submit
+events
+-->
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Illustrate form input validation</title>
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Illustrate form input validation</h1>
+      <h2>Customer Information</h2>
+      <form method="post" action = "/cgi-bin/echo_params.cgi">
+        <Label for="custName">Name</Label>
+        <div class="control-group">
+          <input class="span4" type = "text"  id = "custName" name="custName" 
+                 placeholder="Last name, First name, Middle initial">
+          <span class="help-block">Please enter your name as 'Last name, First name, Middle initial'.</span>
+        </div>
+        <div class="control-group">
+          <label for="phone">Phone number</label>
+          <input class="span4" type = "text"  id = "phone" name="phone" 
+               placeholder="123-456-7890">
+          <span class="help-block">Please enter your telephone number matching pattern '123-456-7890'.</span>
+        </div>
+        <p>
+          <input class="btn" type = "reset"  id = "reset" />
+          <input class="btn btn-primary" type = "submit"  id = "submit" />
+        </p>
+    </form>
+
+    </div> <!-- /container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <!-- Any external JS loaded here -->
+    <script src="validator.js"></script>
+  </body>
+</html>
