@@ -14,19 +14,20 @@ Last session Wednesday 27th February 2013
 Most of the examples are provided as jsFiddle examples. You should open these and study and play with the jQuery code provided.
 
 * [Selecting Elements with Pure JavaScript](http://jsfiddle.net/cpjobling/fNGwZ/1/)
-* [Selecting Elements with jQuery](http://jsfiddle.net/cpjobling/pvknH/10/)
-* [Filtering Elements with jQuery](http://jsfiddle.net/cpjobling/45Uw6/2/)
+* [Selecting Elements with jQuery](http://jsfiddle.net/cpjobling/pvknH/12/)
+* [Filtering Elements with jQuery](http://jsfiddle.net/cpjobling/45Uw6/3/)
 * [jQuery and HTML Attributes](http://jsfiddle.net/cpjobling/JMgMj/1/)
-* [Traversing the DOM](http://jsfiddle.net/cpjobling/YhmFU/2/)
+* [Traversing the DOM](http://jsfiddle.net/cpjobling/YhmFU/7/)
 * [DOM Manipulation](http://jsfiddle.net/cpjobling/Ms6L4/1/)
 * [jQuery and CSS](http://jsfiddle.net/cpjobling/uVbS2/2/)
-* [JQuery Events](http://jsfiddle.net/cpjobling/VZxfs/7/)
-* [Animation Effects with jQuery]()
+* [JQuery Events](http://jsfiddle.net/cpjobling/VZxfs/10/)
+* [Animation Effects with jQuery](http://jsfiddle.net/cpjobling/gBgW8/7/)
 
 ### Live Examples
 
 Served from the EG-259 Virtual Machine:
 
+* [Template for JavaScript Libraries](template_4js.html) - Code [template_4js.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture10/template_4js.html)
 * [Putting it All Together](jquery_events.html) - Code: [jquery_events.html](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture10/jquery_events.html) -- [jquery_events.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture10/jquery_events.js)
 * [Example: Form Validation from previous lecture Implemented in jQuery](validator.html) - Code: [validator.js](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture10/validator.js) (HTML is same as for [previous version](https://github.com/cpjobling/eg-259-vm/blob/master/web/eg-259/examples/lecture9/validator.html)).
 

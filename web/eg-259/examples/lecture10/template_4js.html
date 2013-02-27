@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta charset="utf-8" />
+    <title> Loading JavaScript libraries</title>
+    <!-- Modernizr loaded first so that it can do it's job -->
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  </head>
+  <body>
+    <p>According to current best practice, you should load your scripts last.</p>
+    <p>Order is important!</p>
+    <script src="js/vendor/some_library.js"></script>
+    <script src="js/useful_functions.js"></script>
+    <script src="js/app_scripts.js"></script>
+    <script>
+      // custom per page scripts here
+    </script>
+  </body>
+</html>
