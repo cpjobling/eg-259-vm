@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- beer_get.html
+An example to illustrate CGI. Echoes values passed in GET
+request.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Beer Shop - Using GET</title>
+  </head>
+  <body>
+    <h1>Beer Shop &ndash; Using GET</h1>
+    <form method="get" action="/cgi-bin/echo_params.cgi">
+      <p>
+        What's your poison?
+      </p>
+      <p>
+        Beer colour
+        <select name="colour"/>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        </select>
+        <br />
+        Beer taste
+        <select name="taste"/>
+        <option value="malty">Malty</option>
+        <option value="hoppy">Hoppy</option>
+        </select>
+        <br />
+        <input type="submit" />
+    </form>
+  </body>
+</html>
