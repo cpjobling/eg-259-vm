@@ -14,15 +14,23 @@ forms interact with scripts.
   <head>
     <meta charset="utf-8" />
     <title> Echo Parameters in PHP </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
   <body>
-    <h1> Echo GET/POST parameters in PHP </h1>
-    <?php foreach ($_REQUEST as $name => $value) { ?>
-    <p>
-      The field with the NAME attribute equal to <b><?php print ("$name")
-      ?></b> had VALUE equal to <b><?php print ("$value")
-      ?></b>
-    </p>
-    <?php } // End of for loop.?>
+    <div class="container">
+      <h1> Echo GET/POST parameters in PHP </h1>
+      <?php foreach ($_REQUEST as $name => $value) { ?>
+      <p>
+        The field with the NAME attribute equal to <b><?php print ("$name")
+        ?></b> had VALUE equal to <b><?php print ("$value")
+        ?></b>
+      </p>
+      <?php } // End of for loop.?>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
   </body>
 </html>

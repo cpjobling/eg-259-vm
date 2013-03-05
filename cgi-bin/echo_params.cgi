@@ -15,22 +15,27 @@ my @param=param();
 print "Content-type: text/html\n\n";
 
 print <<END;
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html>
 <!-- echo_params.cgi
      An example to illustrate CGI. Echoes values passed in GET/POST
      request.
-     -->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head><head>
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
     <title>
       Echo Parameters in Perl CGI
     </title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
   <body>
-    <h1>
-      Echo GET/POST parameters in Perl CGI
-    </h1>
+    <div class="container">
+      <h1>
+        Echo GET/POST parameters in Perl CGI
+      </h1>
 END
 
 foreach my $name (param()) {
@@ -40,4 +45,10 @@ foreach my $name (param()) {
 	print "<b>@value</b></p>\n";
 }
 
-print "</body></html>\n"
+print <<END;
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="/js/vendor/bootstrap.min.js"></script>
+  </body>
+</html>
+END
