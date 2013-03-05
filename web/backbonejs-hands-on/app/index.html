@@ -1,0 +1,68 @@
+<!DOCTYPE html>  
+<html lang="en">
+    <head> 
+        <title>JavaScript Module Pattern</title>
+        <meta charset="utf-8"> 
+        <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" />
+
+        <script type="text/template" id="item-home">
+          <div class="container">
+            <div class="page-header">
+                <h1>My Projects App</h1>
+            </div>
+            <div class="row">
+              <div class="span4">
+                    <ul class="nav nav-list">
+                      <li><a href="#add">add new project</a></li>
+                    </ul>
+              </div>
+            </div>
+          </div>
+        </script>
+
+        <script type="text/template" id="item-edit">
+          <form class="form-horizontal">
+            <fieldset>
+              <legend>Create New Project</legend>
+              <div class="control-group">
+                <label class="control-label" for="title">Title:</label>
+                <div class="controls">
+                  <input type="text" class="input-xlarge addTitle" id="title" name="title">
+                </div>
+              </div>
+              <div class="control-group">
+                
+                <div class="controls">
+                   <a href="#" id="cancelBtn" class="btn">close</a>
+                   <a href="#" id="saveBtn" class="btn">save</a>
+                </div>
+              </div>
+              
+            </fieldset>
+          </form>
+        </script>
+
+        <script type="text/template" id="item-list">
+          <li><a href="#update/<%= id %>"><%= title %></a></li>
+        </script>
+
+    </head> 
+    <body>
+
+
+        <!-- Script libraries -->
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://static.stackmob.com/js/json2-min.js"></script>
+        <script src="http://static.stackmob.com/js/underscore-1.3.3-min.js"></script>
+        <script src="http://static.stackmob.com/js/backbone-0.9.2-min.js"></script>
+
+        <!-- NOTE: memorystore.js will set up an in-memory datastore to allow you to experience the app without setting up
+        back-end infrastructure. All the changes you make to the data will be lost the next time you access the app or hit Refresh.
+        To use the app with a persistent RESTful back-end, simply comment out the line below. -->
+        <script src="js/memorystore.js"></script>
+
+        <!-- Application script(s) -->
+        <script src="js/app.js"></script>
+
+    </body>
+</html>
