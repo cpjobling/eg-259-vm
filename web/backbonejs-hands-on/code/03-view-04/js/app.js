@@ -1,4 +1,4 @@
-// View 04 - the initialize method
+// View 04 - creating a view at load-time
 
 (function ($) {
 

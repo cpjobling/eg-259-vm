@@ -52,7 +52,6 @@
             $(".span4 ul").empty();
 
             collection.each(function (project) {
-                console.log(project);
                 el.append(template(project.toJSON()));
             });
 
@@ -126,7 +125,7 @@
 
         render: function() {
           $('.span8').remove();
-          $(this.el).html(this.template(this.model));
+          $(this.el).html(this.template(this.model.toJSON()));
           $('.row').append(this.el);
           return this;
         },
@@ -151,7 +150,8 @@
 
         routes: {
             "": "home",
-            "add": "add"
+            "add": "add",
+            "update/:id": "update"
         },
 
         home: function () {
@@ -162,6 +162,11 @@
         add: function () {
             console.log('add');
             new AddView();
+        },
+
+        update:function(e) {
+            project = projects.get(e);
+            new UpdateView({model: project});
         }
 
     });

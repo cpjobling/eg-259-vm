@@ -220,8 +220,6 @@ window.store = {
 
 store.populate();
 
-console.log(store);
-
 // Overriding Backbone's sync method. Replace the default RESTful services-based implementation
 // with a simple in-memory approach.
 Backbone.sync = function (method, model, options) {
