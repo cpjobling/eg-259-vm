@@ -1,6 +1,10 @@
 (function ($) {
 
-    Project = Backbone.Model.extend({});
+    Project = Backbone.Model.extend({
+        defaults: {
+            title: "" // prevents error when rendering empty project in AddForm
+        }
+    });
 
     Projects = Backbone.Collection.extend({
         Model: Project,
@@ -62,7 +66,7 @@
     });
 
 
-    var AddView = Backbone.View.extend({
+   var AddView = Backbone.View.extend({
 
         className: "span8",
         tagName: "div",
@@ -74,12 +78,13 @@
 
         initialize: function () {
             this.template = _.template($('#item-edit').html());
+            this.collection = this.options.collection;
             this.render();
         },
 
         render: function () {
             $('.span8').remove();
-            $(this.el).html(this.template());
+            $(this.el).html(this.template({title: ""}));
             $('.row').append(this.el);
             return this;
         },
@@ -93,12 +98,10 @@
         save: function (e) {
             e.preventDefault();
 
-            var newProject = new Project({
-                title: $('#title').val()
-            });
+            var newProject =  new Project({title: $('#title').val()});
 
-            projects.add(newProject);
-
+            newProject.save();
+            this.collection.add(newProject);
             $('#title').val('');
 
             return this;
@@ -138,8 +141,12 @@
 
         save: function(e) {
           e.preventDefault();
-
-          this.model.set({name: $('#name').val()});
+          var newTitle = $('#title').val();
+          this.model.save({title: newTitle},{
+            success: function(model) {
+                console.log("Updated project " + model.get('title'));
+            }
+          });
 
           return this;
         }
@@ -161,7 +168,7 @@
 
         add: function () {
             console.log('add');
-            new AddView();
+            new AddView({collection: projects});
         },
 
         update:function(e) {
