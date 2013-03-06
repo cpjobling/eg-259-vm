@@ -14,7 +14,7 @@ See [the notes]() for the accompanying notes.
 
 ## 1 The Model
 
-*  jsFiddle [Model 01](http://jsfiddle.net/cpjobling/HHw5j/2/) - local [01-model-01](code/01-model-10/index.html) - [source code](https://github.com/cpjobling/eg-259-vm/blob/master/web/backbonejs-hands-on/code/01-model-01/js/app.js) 
+*  jsFiddle [Model 01](http://jsfiddle.net/cpjobling/HHw5j/2/) - local [01-model-01](code/01-model-01/index.html) - [source code](https://github.com/cpjobling/eg-259-vm/blob/master/web/backbonejs-hands-on/code/01-model-01/js/app.js) 
 *  jsFiddle [Model 02](http://jsfiddle.net/cpjobling/stcB6/5/) - local [01-model-02](code/01-model-02/index.html) - [source code](https://github.com/cpjobling/eg-259-vm/blob/master/web/backbonejs-hands-on/code/01-model-02/js/app.js)
 *  jsFiddle [Model 03](http://jsfiddle.net/cpjobling/stcB6/4/) - local [01-model-03](code/01-model-03/index.html) - [source code](https://github.com/cpjobling/eg-259-vm/blob/master/web/backbonejs-hands-on/code/01-model-03/js/app.js)
 
